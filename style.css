@@ -1,0 +1,7 @@
+p,a{
+    margin: 20px ;
+    padding: 50px;
+    border: 1px solid ;
+    display: inline-block; /* inline block bertujuan utk meminimal tempat agar 
+    tidak perlu mengambil full width dari suatu element, kalau mau ambil full emelemnt bisa dengan tulis 'block' saja */
+}
