@@ -1,7 +1,25 @@
-p,a{
-    margin: 20px ; /* utk di luar border*/
-    padding: 50px; /* utk di dlm border*/
+ /*p,a{ 
+    margin: 20px ;  utk di luar border
+    padding: 50px;  utk di dlm border
     border: 1px solid ;
-    display: inline-block; /* inline block bertujuan utk meminimal tempat agar 
-    tidak perlu mengambil full width dari suatu element, kalau mau ambil full width bisa dengan tulis 'block' saja */
+    display: inline-block;  inline block bertujuan utk meminimal tempat agar 
+    tidak perlu mengambil full width dari suatu element, kalau mau ambil full width bisa dengan tulis 'block' saja
+}  */
+
+.wrapper{
+    background: #fff;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.wrapper:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+img{
+    float: left; /* this is where i can play the position of the img */
+    margin: 10px;
 }
