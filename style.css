@@ -1,4 +1,6 @@
- /*p,a{ 
+/* this is learning box model*/
+
+/*p,a{ 
     margin: 20px ;  utk di luar border
     padding: 50px;  utk di dlm border
     border: 1px solid ;
@@ -6,20 +8,74 @@
     tidak perlu mengambil full width dari suatu element, kalau mau ambil full width bisa dengan tulis 'block' saja
 }  */
 
-.wrapper{
-    background: #fff;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
+/* this is learning float*/
+
+.wrapper {
+  background: #fff;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.wrapper:after{
-    content: "";
+.wrapper:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+img {
+  float: left; /* this is where i can play the position of the img */
+  margin: 10px;
+}
+
+.blue {
+  background: blue;
+  float: right; /*the things will go right and the red and the under things will go up*/
+}
+
+.red {
+  background: red;
+  float: right;
+}
+
+.green {
+  background: green;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+}
+
+.service h2, .service p{
+    color: #999;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.service{
+    float: left;
+    background: #eee;
+    width: 29.33%; 
+    margin: 1%; /* di luar border*/
+    padding: 1%; /* di dlm border*/
+    height: 140px;
+}
+
+.content{
+    padding: 10px;
+    background: #ccc;
+    clear: left; /* karena barangnya di kiri*/
+    margin-top: 100px; /* kalau tidak gunakan pseduo code , gk akan jln*/
+
+}
+
+.services:after{ 
+    /* ini adalah pseudo code */
+    content: "hello";
+    background: red;
     display: block;
-    clear: both;
-}
+    clear: both; /*kita kembalikan document flow ke titik awal dgn cara clear both di pseudo code,
+    jadi kita bsa gunakan margin lagi di bagian .content*/
 
-img{
-    float: left; /* this is where i can play the position of the img */
-    margin: 10px;
 }
