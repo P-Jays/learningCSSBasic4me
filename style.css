@@ -61,6 +61,22 @@
   margin: 1%; /* di luar border*/
   padding: 1%; /* di dlm border*/
   height: 140px;
+  position: relative;  /* offside the document flow*/
+}
+
+.service:nth-child(1){
+  top: 5px;
+}
+
+.service:nth-child(2){
+  background: bisque;
+  right: 50px;
+  top: 15px;
+}
+
+.service:nth-child(3){
+  top: 25px;
+  right: 79px;
 }
 
 .content {
