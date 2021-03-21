@@ -1,3 +1,6 @@
+/* kalau tidak paham cara design, kita bsa dgn cara bodoh
+yaitu dengan print keluar dgn warna dan huruf */
+
 /* this is learning box model*/
 
 /*p,a{ 
@@ -61,20 +64,20 @@
   margin: 1%; /* di luar border*/
   padding: 1%; /* di dlm border*/
   height: 140px;
-  position: relative;  /* offside the document flow*/
+  position: relative; /* offside the document flow*/
 }
 
-.service:nth-child(1){
+.service:nth-child(1) {
   top: 5px;
 }
 
-.service:nth-child(2){
+.service:nth-child(2) {
   background: bisque;
   right: 50px;
   top: 15px;
 }
 
-.service:nth-child(3){
+.service:nth-child(3) {
   top: 25px;
   right: 79px;
 }
@@ -86,7 +89,7 @@
   margin-top: 100px; /* kalau tidak gunakan pseduo code , gk akan jln*/
 }
 
-.content p{
+.content p {
   -webkit-column-count: 3; /* untuk buat jadi bagian, ad bbrp website tidak bsa baca jdi pakai webkit*/
   column-count: 3;
   -webkit-column-gap: 50px; /* sesuai namanya , kita kasih gap di bagian ksong*/
@@ -119,4 +122,34 @@ aside {
   background: red;
   display: block;
   clear: both;
+}
+
+/* tujuan absolute adalah kita bisa membuat text ada di dlm foto,
+tetapi dgn cara membuat element yg ada di position absolute utk melekat pada element yang ad 
+di position relative */
+
+#banner {
+  max-height: 500px; /* tujuan max height adalh tinggi max dari sebuah element, 
+  jadi barang di bawah bisa timpa elememnt yg melewati max-height*/
+  overflow: hidden; /* menutupi element yg melewati batas max-height*/
+  margin: 1%;
+  position: relative; /*sebagai tumpu utk position absolute*/
+}
+
+#banner h2 {
+  position: absolute; /* kita dapat memposisikan element absolutly di halaman web kita*/
+  top: 250px;
+  margin: 0;
+  width: 100%; /*dgn width segini baru bsa text-align center*/
+  background-color: #999;
+  text-align: center;
+}
+
+#banner p {
+  position: absolute; /* karena kita di dlm div, jadinya kita bsa terikat dgn relative banner*/
+  top: 300px;
+  margin: 0;
+  width: 100%;
+  background-color: #999;
+  text-align: center;
 }
