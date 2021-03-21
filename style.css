@@ -153,3 +153,27 @@ di position relative */
   background-color: #999;
   text-align: center;
 }
+
+/* fixed position , tujuannya berguna utk membuat navbar yg gk gerak, tetap di tempat
+fixed position juga tidak di document flow jadinya, sekali pakai kta bebas kotak katik , */
+
+nav{
+  background: #333;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%; /* ini sgt berguna kalau kita mau align sesuatu*/
+}
+
+nav ul::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+nav li{
+  list-style-type:none ;
+  margin: 0 10px;
+  color: #fff;
+  float: right;
+}
