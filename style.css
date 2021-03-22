@@ -106,6 +106,21 @@ yaitu dengan print keluar dgn warna dan huruf */
   text-align: justify; /* merapikan biar sebaris semua*/
 }
 
+
+/*disini adalah cipping content, 
+clipping content adalah menutup bagian bawah content dengan scroll maupun kosong*/
+
+.services{
+  max-height: 150px;
+  overflow: hidden;
+}
+
+/* karena kita menggunakan clipping content jadi bagian services:after jadi tertutup karena kita buat overflow 'hidden'
+tapi jika kita gunakan scroll, bagian after akan keluar lgi 
+hidden: tutup bagian bawah
+scroll: content bagian bawah bisa di scroll, scroll dalam element (plus scroll kiri kanan)
+auto : cma scroll bawah atas*/
+
 .services:after {
   /* ini adalah pseudo code */
   content: "hello";
@@ -190,4 +205,5 @@ nav li{
   color: #fff;
   float: right;
 }
+
 
