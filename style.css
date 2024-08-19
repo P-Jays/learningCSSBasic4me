@@ -1,7 +1,106 @@
-p,a{
-    margin: 20px ; /* utk di luar border*/
-    padding: 50px; /* utk di dlm border*/
+/* this is learning box model*/
+
+/*p,a{ 
+    margin: 20px ;  utk di luar border
+    padding: 50px;  utk di dlm border
     border: 1px solid ;
-    display: inline-block; /* inline block bertujuan utk meminimal tempat agar 
-    tidak perlu mengambil full width dari suatu element, kalau mau ambil full width bisa dengan tulis 'block' saja */
+    display: inline-block;  inline block bertujuan utk meminimal tempat agar 
+    tidak perlu mengambil full width dari suatu element, kalau mau ambil full width bisa dengan tulis 'block' saja
+}  */
+
+/* this is learning float*/
+
+.wrapper {
+  background: #fff;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.wrapper:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.picture {
+  float: left; /* this is where i can play the position of the img */
+  margin: 10px;
+}
+
+.blue {
+  background: blue;
+  float: right; /*the things will go right and the red and the under things will go up*/
+}
+
+.red {
+  background: red;
+  float: right;
+}
+
+.green {
+  background: green;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+}
+
+.service h2,
+.service p {
+  color: #999;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.service {
+  float: left;
+  background: #eee;
+  width: 29.33%;
+  margin: 1%; /* di luar border*/
+  padding: 1%; /* di dlm border*/
+  height: 140px;
+}
+
+.content {
+  padding: 10px;
+  background: #ccc;
+  clear: left; /* karena barangnya di kiri*/
+  margin-top: 100px; /* kalau tidak gunakan pseduo code , gk akan jln*/
+}
+
+.content p{
+  -webkit-column-count: 3; /* untuk buat jadi bagian, ad bbrp website tidak bsa baca jdi pakai webkit*/
+  column-count: 3;
+  -webkit-column-gap: 50px; /* sesuai namanya , kita kasih gap di bagian ksong*/
+  column-gap: 50px;
+  -webkit-column-rule: 1px solid #999;
+  column-rule: 1px solid #999;
+  text-align: justify; /* merapikan biar sebaris semua*/
+}
+
+.services:after {
+  /* ini adalah pseudo code */
+  content: "hello";
+  background: red;
+  display: block;
+  clear: both; /*kita kembalikan document flow ke titik awal dgn cara clear both di pseudo code,
+    jadi kita bsa gunakan margin lagi di bagian .content*/
+}
+
+section,
+aside {
+  float: left;
+  width: 46%;
+  padding: 1%;
+  margin: 1%;
+  background: #f2f2f2;
+}
+
+.columns:after {
+  content: "hello again";
+  background: red;
+  display: block;
+  clear: both;
 }
